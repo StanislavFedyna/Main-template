@@ -4,4 +4,5 @@ module.exports = [
   '../tasks/scripts.js',
   '../tasks/css-libs.js',
   '../tasks/watch.js',
+  '../tasks/clean.js'
 ];
