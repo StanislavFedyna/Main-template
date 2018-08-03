@@ -1,0 +1,13 @@
+@import 'partials/_fonts.scss';
+@import 'partials/_vars.scss';
+@import 'partials/_mixins.scss';
+@import 'libs.css';
+
+body{
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.6;
+	font-family: "RobotoRegular", sans-serif;
+	overflow-x: hidden;
+}
