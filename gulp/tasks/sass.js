@@ -1,11 +1,10 @@
 module.exports = function() {
-  gulp.task('sass', function(){ // Создаем таск Sass
-    return gulp.src('../../src/sass/*.scss') // Берем источник
-      .pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
-      .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
-      .pipe(gulp.dest('../../src/css')) // Выгружаем результата в папку app/css
-      .pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
+  gulp.task('sass', function(){
+    return gulp.src('../../src/sass/*.scss')
+      .pipe(csscomb())
+      .pipe(sass())
+      .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+      .pipe(gulp.dest('../../src/css'))
+      .pipe(browserSync.reload({stream: true}))
   });  
 };
-
-// ДОБАВИТИ ІНШІ КОМПОНЕНТИ CSS COMB))))
