@@ -5,5 +5,6 @@ module.exports = [
   '../tasks/css-libs.js',
   '../tasks/watch.js',
   '../tasks/clean.js',
-  '../tasks/img.js'
+  '../tasks/img.js',
+  '../tasks/build.js'
 ];
