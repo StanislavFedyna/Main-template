@@ -6,5 +6,7 @@ module.exports = [
   '../tasks/watch.js',
   '../tasks/clean.js',
   '../tasks/img.js',
-  '../tasks/build.js'
+  '../tasks/build.js',
+  '../tasks/cache.js',
+  '../tasks/cache.js'
 ];
