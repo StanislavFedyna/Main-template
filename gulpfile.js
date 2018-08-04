@@ -1,6 +1,6 @@
 var gulp         = require('gulp'), 
     sass         = require('gulp-sass'), 
-    browserSync  = require('browser-sync'), 
+    
     concat       = require('gulp-concat'), 
     uglify       = require('gulp-uglifyjs'), 
     cssnano      = require('gulp-cssnano'), 
@@ -9,6 +9,17 @@ var gulp         = require('gulp'),
     imagemin     = require('gulp-imagemin'), 
     pngquant     = require('imagemin-pngquant'), 
     cache        = require('gulp-cache'), 
-    autoprefixer = require('gulp-autoprefixer');
+    
+    
+    requireDir   = require('require-dir');
+
+var tasks = requireDir('gulp/tasks');
+
+gulp.task('sass',tasks.sass);
+    
 
     
+
+  
+    
+

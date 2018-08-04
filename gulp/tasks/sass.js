@@ -1,3 +1,9 @@
+var gulp         = require('gulp'),
+    sass         = require('gulp-sass'),
+    csscomb      = require('gulp-csscomb'),
+    browserSync  = require('browser-sync'), 
+    autoprefixer = require('gulp-autoprefixer');
+
 module.exports = function() {
   gulp.task('sass', function(){
     return gulp.src('../../src/sass/*.scss')
