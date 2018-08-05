@@ -2,26 +2,22 @@ var gulp         = require('gulp'),
     cssnano      = require('gulp-cssnano'), 
     rename       = require('gulp-rename'), 
     del          = require('del'), 
-    cache        = require('gulp-cache'), 
-    requireDir   = require('require-dir'),
     plugins      = require('gulp-load-plugins');
     
+var path = '../main-template/gulp/tasks/',
+    task   = gulp.task;
 
-gulp.task('sass',require('../main-template/gulp/tasks/sass')(gulp,plugins));
 
-gulp.task('server',require('../main-template/gulp/tasks/server')(gulp,plugins));
+task('sass',require(path + 'sass')(gulp,plugins));
+task('server',require(path + 'server')(gulp,plugins));
+task('img',require(path + 'img')(gulp,plugins));
+task('scripts',require(path + 'scripts')(gulp,plugins));
+task('css-libs',require(path + 'css-libs')(gulp,plugins));
+task('clean',require(path + 'clean')(gulp,plugins));
+task('clear', require(path +'cache')(gulp,plugins));
+task('watch', ['server', 'css-libs', 'scripts'], require(path + 'watch')(gulp,plugins));
+task('build', ['clean', 'img', 'sass', 'scripts'], require(path + 'build')(gulp,plugins));
 
-gulp.task('img',require('../main-template/gulp/tasks/img')(gulp,plugins));
-
-gulp.task('scripts',require('../main-template/gulp/tasks/scripts')(gulp,plugins));
-
-gulp.task('css-libs',require('../main-template/gulp/tasks/css-libs')(gulp,plugins));
-
-gulp.task('clean',require('../main-template/gulp/tasks/clean')(gulp,plugins));
-
-gulp.task('build', ['clean', 'img', 'sass', 'scripts'], require('../main-template/gulp/tasks/build')(gulp,plugins));
-
-gulp.task('watch', ['server', 'css-libs', 'scripts'], require('../main-template/gulp/tasks/watch')(gulp,plugins));
 
     
 
