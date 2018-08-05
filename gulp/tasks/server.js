@@ -1,12 +1,13 @@
-module.exports = function() {
-  gulp.task('browser-sync', function() { // Создаем таск browser-sync
-    browserSync({ // Выполняем browserSync
-      server: { // Определяем параметры сервера
-        baseDir: '../../src' // Директория для сервера - app
-      },
-      notify: false // Отключаем уведомления
-    });
-  });
-};
+var browserSync  = require('browser-sync');
 
-// ДОБАВИТИ ІНШІ КОМПОНЕНТИ CSS COMB))))
+module.exports = function (gulp, plugins) {
+  return function() {
+    browserSync({
+      server: { 
+        baseDir: 'src' 
+      },
+      notify: false
+    });
+  };
+  
+};

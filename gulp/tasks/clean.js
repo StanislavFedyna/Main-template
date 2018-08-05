@@ -1,5 +1,10 @@
+var
+del = require('del');
+
 module.exports = function() {
-  gulp.task('clean', function() {
-    return del.sync('../../dist'); // Удаляем папку dist перед сборкой
-  });
+  
+  return function() {
+    del.sync('dist'); // Удаляем папку dist перед сборкой
+  };
+
 };
