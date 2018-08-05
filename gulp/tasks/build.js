@@ -5,7 +5,7 @@ module.exports = function (gulp, plugins) {
       // 'app/css/libs.min.css' //Записати потрібну лібу
       ])
     .pipe(gulp.dest('dist/css'))
-
+    
     //Fonts
     gulp.src('src/fonts/*')
     .pipe(gulp.dest('/dist/fonts'))
