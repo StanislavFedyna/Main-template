@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/StanislavFedyna/main-template#readme",
   "dependencies": {
+    "bourbon": "^5.1.0",
     "browser-sync": "^2.24.6",
     "del": "^3.0.0",
     "gulp": "^3.9.1",

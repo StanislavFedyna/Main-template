@@ -11,7 +11,7 @@ module.exports = function (gulp, plugins) {
     gulp.src('src/sass/*.scss')
       .pipe(sourcemaps.init())
       .pipe(csscomb())
-      .pipe(sass())
+      .pipe(sass().on('error', sass.logError))
       .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {
         cascade: true
       }))

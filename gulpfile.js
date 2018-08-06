@@ -14,6 +14,5 @@ gulp.task('clean', getTask('clean'));
 gulp.task('watch', ['server', 'css-libs', 'scripts'], getTask('watch'));
 gulp.task('build', ['clean', 'img', 'sass', 'scripts'], getTask('build'));
 
-
 // From time to time
 gulp.task('cache', getTask('cache'));

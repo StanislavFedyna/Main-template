@@ -8,7 +8,7 @@ module.exports = function (gulp, plugins) {
     
     //Fonts
     gulp.src('src/fonts/*')
-    .pipe(gulp.dest('/dist/fonts'))
+    .pipe(gulp.dest('dist'))
 
     //JS
     gulp.src('src/js/*')
@@ -16,7 +16,7 @@ module.exports = function (gulp, plugins) {
 
     //HTML
     gulp.src('src/*.html')
-    .pipe(gulp.dest('/dist'));
+    .pipe(gulp.dest('dist'));
   
   };
 

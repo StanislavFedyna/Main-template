@@ -1,5 +1,4 @@
-// @import 'bourbon/bourbon';
-
+@import "bourbon/bourbon";
 @import 'partials/_fonts.scss';
 @import 'partials/_vars.scss';
 @import 'partials/_mixins.scss';
@@ -12,4 +11,8 @@ body{
 	line-height: 1.6;
 	font-family: "RobotoRegular", sans-serif;
   overflow-x: hidden;
+}
+
+.block{
+  @include clearfix;
 }
