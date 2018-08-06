@@ -29,6 +29,7 @@
     "gulp-load-plugins": "^1.5.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
     "gulp-uglifyjs": "^0.6.2",
     "imagemin-pngquant": "^6.0.0",
     "normalize-scss": "^7.0.1",
