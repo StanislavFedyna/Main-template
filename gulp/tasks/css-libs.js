@@ -9,7 +9,7 @@ module.exports = function (gulp, plugins) {
       .pipe(cssnano()) // Сжимаем
       .pipe(rename({
         suffix: '.min'
-      })) // Добавляем суффикс .min
+      })) //add suffix
       .pipe(gulp.dest('src/css/'));
   };
 
