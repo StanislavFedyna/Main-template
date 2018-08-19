@@ -3,13 +3,15 @@ sass         = require('gulp-sass'),
 csscomb      = require('gulp-csscomb'),
 browserSync  = require('browser-sync'), 
 autoprefixer = require('gulp-autoprefixer'),
-sourcemaps   = require('gulp-sourcemaps');
+sourcemaps   = require('gulp-sourcemaps'),
+SassGlob = require('gulp-sass-glob');
 
 module.exports = function (gulp, plugins) {
   
   return function () {
     gulp.src('src/sass/*.scss')
       .pipe(sourcemaps.init())
+      .pipe(sassGlob())
       .pipe(csscomb())
       .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
       .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {
