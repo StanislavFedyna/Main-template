@@ -4,7 +4,7 @@ csscomb      = require('gulp-csscomb'),
 browserSync  = require('browser-sync'), 
 autoprefixer = require('gulp-autoprefixer'),
 sourcemaps   = require('gulp-sourcemaps'),
-SassGlob = require('gulp-sass-glob');
+sassGlob = require('gulp-sass-glob');
 
 module.exports = function (gulp, plugins) {
   
