@@ -1,8 +1,20 @@
+// Libs
 @import "bourbon/bourbon";
+@import 'libs.css';
+
+//Partials
 @import 'partials/_fonts.scss';
 @import 'partials/_vars.scss';
 @import 'partials/_mixins.scss';
-@import 'libs.css';
+
+//Logic blocks
+@import 'blocks/navbar.scss';
+@import 'blocks/header.scss';
+@import 'blocks/sidebar.scss';
+@import 'blocks/content.scss';
+@import 'blocks/footer.scss';
+
+//Main setups
 
 body{
 	font-size: 16px;
@@ -10,9 +22,5 @@ body{
 	position: relative;
 	line-height: 1.6;
 	font-family: "RobotoRegular", sans-serif;
-  overflow-x: hidden;
-}
-
-.block{
-  @include clearfix;
+  	overflow-x: hidden;
 }
